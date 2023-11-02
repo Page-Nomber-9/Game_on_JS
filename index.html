@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Старт</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="img_general">
+            <img src="img/gamer.png">
+        </div>
+        <div class="form_general">
+           <form action="main.html">
+            <input type="submit" value="Начать">
+            </form>
+            <form id="nastroyki_btt">
+                <input type="submit" value="Настройки">
+            </form> 
+        </div>
+        <div class="nastroyki1" id="nastroyki">
+            <p class="nastroyki">Настройки</p>
+            <div class="nastroyki2" >
+                <form id="form_nastroiky" method="post">
+                    <p>Скорость игрока</p>
+                    <input id="speed_gamer" name="speed_gamer" type="range" value="10" max="15" min="5"><span id="span_speed_gamer"></span>
+                    <p>Скорость блоков</p>
+                    <input id="speed_block" name="speed_block" type="range" value="15" max="30" min="10"><span id="span_speed_block"></span><br>
+                    <p>Частота блоков</p>
+                    <input id="col_block" name="col_block" type="range" value="5" max="10" min="1"><span id="span_col_block"></span><br>
+                    <div class="sub_res">
+                        <input type="submit" value="ОК">
+                        <input type="reset" value="Отмена"> 
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="Index_js.js"></script>
+    </body>
+</html>

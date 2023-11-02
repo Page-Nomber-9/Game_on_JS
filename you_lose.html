@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Старт</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="img_general">
+            <img src="img/gamer.png">
+        </div>
+        <div class="table_div">
+        <table>
+            <script>
+                var res_min;
+                var res_sek;
+                var res_mlsek;
+                    res_min = Math.floor(localStorage.getItem('time_result')/1000/60);
+                    res_sek = Math.floor(localStorage.getItem('time_result')/1000);
+                    res_mlsek = Math.floor(localStorage.getItem('time_result'));
+                    document.write("<tr class='you_lose_div'><td><p class='you_lose_id'>Ваш результат</p>" +
+                    "</td><td><p class='you_lose_result'>" +
+                    res_min + " мин. " + (res_sek - res_min*60) + "," + (res_mlsek- res_sek*1000 - res_min*60*1000) +
+                    " сек.</p></td></tr>");
+                // for (let i = 0; i < localStorage.length; i++){
+                //     res_min = Math.floor(localStorage.getItem(i)/1000/60);
+                //     res_sek = Math.floor(localStorage.getItem(i)/1000);
+                //     res_mlsek = Math.floor(localStorage.getItem(i));
+                //     document.write("<tr class='you_lose_div'><td><p class='you_lose_id'>"+(i+1)+"</p>" +
+                //     "</td><td><p class='you_lose_result'>" +
+                //     res_min + " мин. " + (res_sek - res_min*60) + "," + (res_mlsek- res_sek*1000 - res_min*60*1000) +
+                //     " сек.</p></td></tr>");
+                // }
+            </script>
+        </table>
+    </div>
+        <div class="form_general">
+            <form action="index.html">
+                <input type="submit" value="Выйти">
+            </form> 
+           <form action="main.html">
+                <input type="submit" value="Еще раз!">
+            </form> 
+        </div>
+    </body>
+</html>
